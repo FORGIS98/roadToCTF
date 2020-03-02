@@ -1,0 +1,12 @@
+Receta:
+
+- Un poco de ron negro
+- Una cucharada de azúcar
+- Zumo de lima
+- Una rama de canela
+- Agua hirviendo
+
+Se mezclan todos los ingredientes, añadiendo agua hirviendo hasta llenar el vaso.
+
+Solución al reto: la bebida de la receta 2 veces seguidas (y en minúsculas!)
+
