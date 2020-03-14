@@ -1,4 +1,4 @@
-cipher = "ndj'kt_qtvjc_ndjg_rgneid_psktcijgth" # uapv{ndj'kt_qtvjc_ndjg_rgneid_psktcijgth} = flag{...}
+cipher = "flag" # uapv{flag} = flag{...}
 
 abc = "abcdefghijklmnopqrstuvwxyz"
 newList = []

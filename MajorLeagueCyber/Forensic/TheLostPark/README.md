@@ -2,4 +2,6 @@
 What is the name of this monument?
 
 # Solution
-Using the linux tool `exiftool` we can stract the metadata of the picture and we have the exact GPS location of the status (we can go use it in google maps) or we also find the `Country-Primary Location Name` with the name of the park. Then we search in google.
+Usando `exiftool` vemos los metadatos de la imagen y entre ellos encontramos coordenadas GPS. Vamos a google maps, ponemos las coordenadas y nos lleva a un parque. Luego buscamos el parque en google y buscamos el nombre de la estatua.  
+
+Tambien podeis pasar del GPS, ya que en los metadatos pone info de donde esta. Buscais eso en google con la plabra `statue` despues y también acabais encontrando el nombre de la estatua.

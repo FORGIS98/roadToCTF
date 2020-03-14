@@ -11,4 +11,5 @@ To get in you'll need the password...
 But it looks like you can run commands on the login system. Maybe you can extract the password from the program?
 
 # Solution
-Very easy one, we could use a fancy tool like radare2 to reverse the executable, but for this one we can use a tool call `strings` in linux. Is a command line tool thar print the sequence of printable characters in a file. So with a simple `strings login` you'll find it.
+
+Lo lógico es usar una herramienta tipo `radare2` o `cutter` que viene a ser una interfaz gráfica de radare2. Pero al estar el password a palo seco pues con el comando `strings` podemos imprimir todo lo que es legible del ejecutable. Y con `strings -n 7 archivo` para solo mostrar cosas que tengan mas de 7 caracteres (o 7) pues tenemos el flag. Pongo 7 pero podeis poner 10 o podeis hacer `strings archivo | grep flag` y listo. Solo que no siempre viene laplabra flag.

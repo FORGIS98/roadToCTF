@@ -2,4 +2,4 @@
 Here is a zip file full of just the finest little puppers. Can you find the flag from here?
 
 # Solution
-Nothing special here, just find your way to find the flag. Try using the commands `find` or `locate` or `tree | grep flag`. Have fun.
+Descomprimes el zip, y con un `tree | grep flag` encuentras el archivo flag. Hay comandos mejores que `tree` pero fue el que me vino a la mente. Podriais usar `find` o `locate` que para eso estan.
