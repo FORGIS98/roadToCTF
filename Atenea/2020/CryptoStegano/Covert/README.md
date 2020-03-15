@@ -1,8 +1,7 @@
 # Covert
 Creemos que determinado usuario está utilizando la plataforma de vídeos streamable.com para intercambiar mensajes ocultos. Actualmente hemos interceptado los siguientes enlaces:  
 
-https://streamable.com/jmcsi  
-https://streamable.com/5k2i1  
+enlaces en Atenea
 
 # Solucion
 
