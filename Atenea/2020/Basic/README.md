@@ -39,3 +39,6 @@ Variable2: `echo -n "echo \"Atenea\"" | md5sum.
 C: Se compila con `gcc` y ejecutamos.
 
 ## Retos Python y Java
+Python: Para resolver el reto, primero necesitaremos tener instalado el modulo de python Crypto (deberia valer con un `pip install pycrypto` o `pip install crypto` no recuerdo cual de los dos era) luego nos interesa la variable `result`. Para imprimir una variable en python usamos la función `print()` por lo tanto en este caso, añadiendo al final `print(result)` y ejecutando se nos mostrará el flag.  
+
+Java: Nos dan un archivo .class de java, estos archivos pueden ser descompilados con herramientas online o en nuestro caso usando `jad`. Ejecutamos `jad archivo` y aparece `archivo.jad` lo abrimos, leemos el nombre de las varibales y abamos encontrando el flag.
