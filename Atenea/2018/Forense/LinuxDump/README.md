@@ -1,0 +1,15 @@
+# Linux Dump
+Una de las alertas del SIEM ha reportado que determinado equipo Linux está realizando multitud de peticiones a una IP externa. Se sospecha que la máquina ha podido ser comprometida. Para comenzar la investigación se ha realizado un volcado de memoria antes de apagar dicho equipo.  
+
+Como analista deberás identificar el PID dañino responsable de esta alerta (por ejemplo: 1255)  
+
+# Solucion
+
+Paso 1: Lo primero es averiguar, de que distribucion de linux se trata y de que version. Esto es necesario, porque la herramienta `volatility` necesita un `profile` especifico de la distribucion y version del volcado de memoria que vamos a analizar. Dicho esto, lo primero es ejecutar un `strings <archivo> | grep -i GNU/Linux` y deberiamos encontrar un `Welcome...` Y tenemos que se ha usado un `Ubuntu 15.10`.  
+Paso 2: Buscamos por internet a ver si hay alguien que tenga un perfil de esta misma version hecho. De no encontrarlo, tenemos que descargar una imagen de ubuntu de esa version y meterla en una maquina virtual y montarnos por nuestra cuenta ese perfil. En mi caso, usé la imagen de ubuntu que puedes encontrar en este github: https://github.com/volatilityfoundation/profiles  
+Paso 3: Necesitaremos haber descargado `volatility`, recomiendo bajar el github y tirar del archivo `vol.py`. Eso si, usando `python2.7`. Del repo anteriormente mencionado metemos en `volatility/volatility/plugins/overlays/linux` el zip de Ubuntu1510 (sin descomprimir, lo dejais en el zip)  
+Paso 4: Verificamos que se haya añadido bien con `vol.py --info | grep -i ubuntu` para ver todos los comandos disponibles, lo mejor es ir a la wiki de github, porque haciendo `vol.py --help` no enseña todo.  
+Paso 5: Vamos a ejecutar varios comandos, y guardar info en archivos distintos y luego procedemos a mirar que hay en ellos. Antes de ello, yo pongo `vola` pero es un alias al script de `vol.py`. Haremos `vola --profile=LinuxUbuntu1510x64 -f dump linux_pslist > procesos.txt`, `vola --profile=LinuxUbuntu1510x64 -f dump linux_bash > bash_history.txt`, `vola --profile=LinuxUbuntu1510x64 -f dump linux_psaux > procesos_con_comando.txt`.  
+Paso 6: Empecemos con `procesos.txt`, lo que hice fue leerme los de abajo, fijaos en la hora, algunos procesos se ejecutan en el mismo segundo de tiempo, esos los esta ejecutando la maquina de ahi que esten tan juntos en el tiempo. A nosotros nos interesan los que se ejecutan en tiempos mas humanos. Si no me he explicado da igual, de este archivo no sacamos nada en claro. Luego, `bash_history`. En este hay una cosa muy jugosa, `wget...`, si buscamos en google el link que se esta bajando `wget` nos lleva a un pastebin que tiene toda la pinta de estar llamando a una IP pasada por parametro una y otra y otra vez. Tantas veces como le hayan pasado por parametro. Si volvemos a `bash_history` vemos que a parte del `wget`, luego se compila y ejecuta. Esa ejecución es la que queremos, necesitamos saber cual es el `PID` de esa ejecución. Para ello, `procesos_con_comandos.txt`, al final encontramos el comando, y el `PID` del mismo es el flag.  
+
+
