@@ -1,0 +1,5 @@
+# H1 Thermostat
+
+Tras esperar unos 30-40 segundos en la página web y recargar un par de veces nos bajamos el apk. Para este ctf vamos a necesitar la ayuda de `apktool`. Lo primero que hacemos tras descargarlo es `apktool d archivo.apk`. Nos deja en una carpeta varios archivos, a partir de aqui hay que tener paciencia puesto que hay muchas cosas. Pero encontrar el flag no requiere de mas habilidad mas que un poco de lógica. Hay muchos archivos, cuestion de ejecutar `tree`. De los muchos archivos y carpetas hay una en especial que nos suena, `hacker101` o algo así se llama la carpeta. Dentro de ella hay muchos archivos, y otra carpeta, `model` donde encontramos dos archivos con un nombre llamativo, `payloadrequest`. Bien, pues uno de los dos archivos contiene ambos flags, simplemente abridlo con un editor de texto y buscad la palabra `flag`.  
+
+Mas tarde encontré otra forma más facil de resolver el ctf, sabemos que hacker101 presenta los flag con la sintaxis `^FLAG^...$FLAG$` asi que podemos hacer `grep -Rlw "FLAG" ./` y encontramos el archivo en el que esta esa palabra.
