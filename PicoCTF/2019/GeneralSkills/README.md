@@ -8,3 +8,14 @@ TODO
 # Warmed Up
 What is 0x3D (base 16) in decimal (base 10).
 
+# Bases
+What does this bDNhcm5fdGgzX3IwcDM1 mean? I think it has something to do with bases.
+
+# Firts Grep
+Can you find the flag in file? This would be really tedious to look through manually, something tells me there is a better way. You can also find the file in /problems/first-grep_4_6b0be85ad029e98c683231bdafec396c on the shell server.
+
+# Resources
+We put together a bunch of resources to help you out on our website! If you go over there, you might even find a flag! https://picoctf.com/resources (link)
+
+# Strings It
+Can you find the flag in file without running it? You can also find the file in /problems/strings-it_0_b76c77672f6285e3a39c188481cdff99 on the shell server.
