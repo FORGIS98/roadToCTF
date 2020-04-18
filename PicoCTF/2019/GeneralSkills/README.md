@@ -19,3 +19,26 @@ We put together a bunch of resources to help you out on our website! If you go o
 
 # Strings It
 Can you find the flag in file without running it? You can also find the file in /problems/strings-it_0_b76c77672f6285e3a39c188481cdff99 on the shell server.
+
+# What's a net cat?
+Using netcat (nc) is going to be pretty important. Can you connect to 2019shell1.picoctf.com at port 4158 to get the flag?
+
+# Based
+To get truly 1337, you must understand different data encodings, such as hexadecimal or binary. Can you get the flag from this program to prove you are on the way to becoming 1337? Connect with nc 2019shell1.picoctf.com 29594.
+
+bin, oct, hex
+
+# Firts Grep 2
+Can you find the flag in /problems/first-grep--part-ii_6_84224d7d745e41d24bde7e7bc7062bbe/files on the shell server? Remember to use grep.
+
+# Plumbing
+Sometimes you need to handle process data outside of a file. Can you find a way to keep the output from this program and search for the flag? Connect to 2019shell1.picoctf.com 21957.
+
+# Whats The Difference
+Can you spot the difference? kitters cattos. They are also available at /problems/whats-the-difference_0_00862749a2aeb45993f36cc9cf98a47a on the shell server
+
+Using `vbindiff` or `cmp  --verbose --print-bytes  cattos.jpg kitters.jpg` we get the flag
+
+# Where is the file
+I've used a super secret mind trick to hide this file. Maybe something lies in /problems/where-is-the-file_3_19c1a7766ac2747c446eb9666a9b4fb4.
+oculta por empezar con un "."
