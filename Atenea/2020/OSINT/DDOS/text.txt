@@ -1,0 +1,11 @@
+Hi folk! Are you ready??
+
+To compile: gcc ddos3r.c -w -o ddos3r -lpthread
+
+./ddos3r target threads proxy time ip
+
+Pay attention on IRC (Freenode / Rizon), we will tell the exact time at 00:00 (same channel), The operation is coming!!!!
+
+Modified versión (DDOSER AMEA v12.31). Remember to change usual things (IP, port, user-agent, etc.) before compiling :D
+
+https://pastebin.com/170pkQY0
