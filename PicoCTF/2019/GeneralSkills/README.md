@@ -42,3 +42,14 @@ Using `vbindiff` or `cmp  --verbose --print-bytes  cattos.jpg kitters.jpg` we ge
 # Where is the file
 I've used a super secret mind trick to hide this file. Maybe something lies in /problems/where-is-the-file_3_19c1a7766ac2747c446eb9666a9b4fb4.
 oculta por empezar con un "."
+
+# Flag Shop
+
+There's a flag shop selling stuff, can you buy a flag? Source. Connect with nc 2019shell1.picoctf.com 29250.
+ el plan es comprar 12341234 osea muchas flags de la opcion de 900 y tu saldo será un numero "muy" negativo, lo que queda traducido en el saldo como positivo. Vamos, un overflow del numero
+
+# Mus1c
+I wrote you a song. Put it in the picoCTF{} flag format
+
+
+
